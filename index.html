@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Magazine Launch - ECHOES</title>
+  <title>ECHOES - Magazine Launch</title>
   <style>
     body {
       margin: 0;
@@ -17,41 +17,47 @@
       text-align: center;
     }
     .container {
-      max-width: 600px;
+      max-width: 800px;
     }
     h1 {
-      font-size: 3rem;
-      margin: 20px 0;
-      letter-spacing: 2px;
+      font-size: 5rem;
+      margin: 0;
+      letter-spacing: 4px;
+      font-weight: bold;
     }
     h2 {
-      font-size: 1.5rem;
+      font-size: 2rem;
       font-weight: 300;
+      margin: 10px 0 30px;
       color: #ffcc00;
+      letter-spacing: 3px;
     }
     .btn {
-      padding: 12px 24px;
+      padding: 14px 32px;
       border: none;
-      border-radius: 8px;
+      border-radius: 10px;
       background: #ffcc00;
       color: #000;
-      font-size: 1rem;
+      font-size: 1.2rem;
       font-weight: bold;
       cursor: pointer;
-      transition: transform 0.2s;
+      transition: transform 0.2s, background 0.2s;
     }
     .btn:hover {
-      transform: scale(1.05);
+      transform: scale(1.08);
+      background: #ffd633;
     }
     .countdown {
-      font-size: 1.2rem;
-      margin-top: 15px;
+      font-size: 1.3rem;
+      margin-top: 20px;
       color: #ffcc00;
     }
   </style>
 </head>
 <body>
   <div class="container">
+    <h1>ECHOES</h1>
+    <h2>MAGAZINE</h2>
     <button class="btn" onclick="launchMagazine()">Launch</button>
     <div id="countdown" class="countdown"></div>
   </div>
@@ -60,12 +66,12 @@
     function launchMagazine() {
       let counter = 5;
       document.getElementById("countdown").textContent = 
-        "Launching ECHOES in " + counter + " seconds...";
+        "Launching in " + counter + " seconds...";
       const interval = setInterval(() => {
         counter--;
         if (counter > 0) {
           document.getElementById("countdown").textContent = 
-            "Launching ECHOES in " + counter + " seconds...";
+            "Launching in " + counter + " seconds...";
         } else {
           clearInterval(interval);
           window.location.href = "https://online.flippingbook.com/view/139171628/";
